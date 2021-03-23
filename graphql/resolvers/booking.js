@@ -1,11 +1,11 @@
-const Booking = require('../../models/booking');
-const Event = require('../../models/event');
-const { transformEvent, transformBooking } = require('./merge');
+const Booking = require("../../models/booking");
+const Event = require("../../models/event");
+const { transformEvent, transformBooking } = require("./merge");
 
 module.exports = {
   bookings: async ({}, req) => {
     if (!req.isAuth) {
-      throw new Error('Unauthenticated!');
+      throw new Error("Unauthenticated!");
     }
     try {
       const bookings = await Booking.find();
@@ -16,12 +16,12 @@ module.exports = {
   },
   bookEvent: async ({ eventId }, req) => {
     if (!req.isAuth) {
-      throw new Error('Unauthenticated!');
+      throw new Error("Unauthenticated!");
     }
     try {
       const fetchedEvent = await Event.findOne({ _id: eventId });
       const booking = new Booking({
-        user: '6059f84313ed914a42e4d224',
+        user: req.userId,
         event: fetchedEvent,
       });
       const result = await booking.save();
@@ -32,11 +32,11 @@ module.exports = {
   },
   cancelBooking: async ({ bookingId }, req) => {
     if (!req.isAuth) {
-      throw new Error('Unauthenticated!');
+      throw new Error("Unauthenticated!");
     }
     try {
       const booking = await Booking.findById({ _id: bookingId }).populate(
-        'event'
+        "event"
       );
       const event = transformEvent(booking.event);
       await Booking.deleteOne({ _id: bookingId });
