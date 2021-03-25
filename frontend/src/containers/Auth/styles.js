@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { planeWhite } from '../../assets/styles/constants';
+import { plainWhite } from '../../assets/styles/constants';
 
 const AuthContainer = styled.div`
-  background: ${planeWhite};
+  background: ${plainWhite};
 `;
 
 export { AuthContainer };

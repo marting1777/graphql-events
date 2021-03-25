@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import { planeWhite } from './assets/styles/constants';
+import { plainWhite } from './assets/styles/constants';
 
-const AppContainer = styled.div`
-  background: ${planeWhite};
+const AppContainer = styled.main`
+  background: ${plainWhite};
+  padding: 6rem 3rem 0 3rem;
 `;
 
 export { AppContainer };

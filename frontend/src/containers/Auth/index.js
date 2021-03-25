@@ -1,9 +1,10 @@
 import { AuthContainer } from './styles';
+import Form from '../../components/Form';
 
 function Auth() {
   return (
     <AuthContainer>
-      <h1>Auth Page</h1>
+      <Form />
     </AuthContainer>
   );
 }
