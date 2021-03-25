@@ -1,7 +1,8 @@
-import { StyledLabel } from './styles';
+import { StyledLabel } from "./styles";
 
 function Label({ htmlFor, labelText }) {
-  return <StyledLabel htmlFor={htmlFor}>{labelText}</StyledLabel>
+  return <StyledLabel htmlFor={htmlFor}>{labelText}</StyledLabel>;
 }
 
 export default Label;
+

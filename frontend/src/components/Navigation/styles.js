@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { plainBlack, plainWhite } from "../../assets/styles/constants";
+import { plainBlack, plainWhite, blue } from "../../assets/styles/constants";
 
 const NavigationHeader = styled.header`
   position: fixed;
@@ -7,7 +7,7 @@ const NavigationHeader = styled.header`
   top: 0;
   width: 100%;
   height: 5.5rem;
-  background: ${plainWhite};
+  background: ${blue};
   padding: 0 1rem;
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@ const NavigationHeader = styled.header`
 
 const NavigationLogo = styled.h1`
   margin: 0;
-  color: ${plainBlack};
+  color: ${plainWhite};
 `;
 
 const NavigationItems = styled.nav`
@@ -36,11 +36,14 @@ const NavigationListItem = styled.li`
   font-size: 1.2rem;
   a {
     text-decoration: none;
-    color: ${plainBlack};
+    color: ${plainWhite};
+    padding: 2px 10px;
     &:hover,
     &:active,
     &.active {
-      color: #ff3400;
+      color: ${plainBlack};
+      background-color: ${plainWhite};
+      border-radius: 4px;
     }
   }
 `;
