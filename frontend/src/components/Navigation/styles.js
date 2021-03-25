@@ -17,7 +17,6 @@ const NavigationHeader = styled.header`
 
 const NavigationLogo = styled.h1`
   margin: 0;
-  font-size: 1rem;
   color: ${plainBlack};
 `;
 

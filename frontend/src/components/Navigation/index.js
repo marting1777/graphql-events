@@ -10,9 +10,7 @@ import { NavLink } from "react-router-dom";
 function Navigation() {
   return (
     <NavigationHeader>
-      <NavigationLogo>
-        <h1>GraphQL Event Planner</h1>
-      </NavigationLogo>
+      <NavigationLogo>GraphQL Event Planner</NavigationLogo>
       <NavigationItems>
         <NavigationUl>
           <NavigationListItem>
