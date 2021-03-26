@@ -12,5 +12,14 @@ const EventsContainer = styled.div`
   max-width: 80%;
 `;
 
-export { EventsContainer };
+const SignInMessageContainer = styled.div`
+  text-align: center;
+  font-size: 1.2rem;
+`;
+
+const EventsListContainer = styled.div`
+  display: block;
+`;
+
+export { EventsContainer, SignInMessageContainer, EventsListContainer };
 
