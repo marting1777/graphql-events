@@ -6,4 +6,3 @@ export default React.createContext({
   login: () => {},
   logout: () => {},
 });
-

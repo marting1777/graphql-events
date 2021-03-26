@@ -14,4 +14,3 @@ function Input({ type, placeholder, value, onChange, inputName, id }) {
 }
 
 export default Input;
-

@@ -6,17 +6,31 @@ import {
 } from "./styles";
 import Button from "../Button";
 
-function Modal({ title, children }) {
+function Modal({
+  title,
+  children,
+  canCancel,
+  canConfirm,
+  onCancel,
+  onConfirm,
+}) {
   return (
     <ModalComponent>
-      <ModalHeader>{title}</ModalHeader>
+      <ModalHeader>
+        <h1>{title}</h1>
+      </ModalHeader>
       <ModalContent>{children}</ModalContent>
       <ModalActions>
-        <Button btnText="Cancel" />
-        <Button btnText="Confirm" />
+        {canCancel && (
+          <Button cancel marginLeft btnText="Cancel" onClick={onCancel} />
+        )}
+        {canConfirm && (
+          <Button confirm marginLeft btnText="Confirm" onClick={onConfirm} />
+        )}
       </ModalActions>
     </ModalComponent>
   );
 }
 
 export default Modal;
+

@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { lightBlue, plainWhite } from '../../assets/styles/constants';
+import styled from "styled-components";
+import { lightBlue, plainWhite } from "../../assets/styles/constants";
 
 const EventsContainer = styled.div`
   background: ${plainWhite};
@@ -13,3 +13,4 @@ const EventsContainer = styled.div`
 `;
 
 export { EventsContainer };
+
